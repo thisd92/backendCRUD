@@ -1,6 +1,7 @@
 package com.devth.crud.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,10 @@ public class UserService {
 	
 	public List<User> findAll(){
 		return userRepository.findAll();
+	}
+	
+	public Optional<User> findById(Long id){
+		return userRepository.findById(id);
 	}
 	
 	public User updateUser(Long id, User user) {
