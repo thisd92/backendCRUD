@@ -3,6 +3,7 @@ package com.devth.crud.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.devth.crud.entities.User;
@@ -11,6 +12,7 @@ import com.devth.crud.repositories.UserRepository;
 @Service
 public class UserService {
 
+	@Autowired
 	private UserRepository userRepository;
 	
 	public User saveUser(User user) {
