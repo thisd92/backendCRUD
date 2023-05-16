@@ -12,10 +12,34 @@ public class UserService {
 
 	private UserRepository userRepository;
 	
-	public List<User> findAll(){
-		List<User> userList = userRepository.findAll();
-		return userList;
+	public User saveUser(User user) {
+		return userRepository.save(user);
 	}
 	
+	public List<User> findAll(){
+		return userRepository.findAll();
+	}
+	
+	public User updateUser(Long id, User user) {
+		User entity = userRepository.getReferenceById(id);
+		updateData(entity, user);
+		return userRepository.save(entity);
+	}
+	
+	public void updateData(User entity,  User user) {
+		entity.setNome(user.getNome());
+		entity.setEmail(user.getEmail());
+		entity.setNome(user.getNome());
+		entity.setTel(user.getTel());
+		entity.setCep(user.getCep());
+		entity.setEndereco(user.getEndereco());
+		entity.setNumero(user.getNumero());
+		entity.setCidade(user.getCidade());
+		entity.setUf(user.getUf());
+	}
+	
+	public void deleteUser(Long id) {
+		userRepository.deleteById(id);
+	}
 	
 }
