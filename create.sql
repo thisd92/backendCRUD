@@ -1,0 +1,3 @@
+create table tb_usuarios (id bigserial not null, cep varchar(255), cidade varchar(255), email varchar(255), endereco varchar(255), nome varchar(255), numero integer, tel varchar(255), uf varchar(255), primary key (id));
+INSERT INTO tb_usuarios (nome, email, tel, cep, endereco, numero, cidade, uf) VALUES ('Thiago', 'thiiagodutra@gmail.com', '51985748767', '90880380', 'R. Dr. Dias da Cruz', 135, 'Porto Alegre', 'RS');
+INSERT INTO tb_usuarios (nome, email, tel, cep, endereco, numero, cidade, uf) VALUES ('Flavia', 'leekhan@gmail.com', '51985748767', '90880380', 'R. Dr. Dias da Cruz', 135, 'Porto Alegre', 'RS');
