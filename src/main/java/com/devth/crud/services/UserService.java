@@ -36,7 +36,6 @@ public class UserService {
 	public void updateData(User entity,  User user) {
 		entity.setNome(user.getNome());
 		entity.setEmail(user.getEmail());
-		entity.setNome(user.getNome());
 		entity.setTel(user.getTel());
 		entity.setCep(user.getCep());
 		entity.setEndereco(user.getEndereco());
